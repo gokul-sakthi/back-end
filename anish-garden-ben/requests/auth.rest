@@ -1,0 +1,23 @@
+
+
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "email": "ellie@gmail.com",
+    "password": "12345678"
+}
+
+###
+
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+    "fullName" : "Ellie",
+    "email": "ellie@gmail.com",
+    "password": "12345678",
+    "role" : "user",
+    "billingAddress": "123 Hyrakuren Platoon",
+    "phone": "1234567890"
+}

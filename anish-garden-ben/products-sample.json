@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Lily",
+    "price": "100",
+    "discountedPrice": "0",
+    "rating": "4",
+    "description": "The colors of lilies are representative of many emotions. For example, orange represents hatred, yellow represents walking on air, and white represents purity. There are over four thousand species of lilies and they have tall stems, thin leaves, and showy flowers. These flowers have been cultivated by humans for thousands of years and were used by ancient civilizations for medicinal and ornamental purposes",
+    "features": {
+      "color": ["pink", "lavender"],
+      "origin": "Native America",
+      "beginnerFriendly": true
+    },
+    "imageUrl": [
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QMdp9np36d4AWYW9JFEKeQHaE8%26pid%3DApi&f=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QMdp9np36d4AWYW9JFEKeQHaE8%26pid%3DApi&f=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QMdp9np36d4AWYW9JFEKeQHaE8%26pid%3DApi&f=1"
+    ],
+    "thumbnail": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapersdsc.net%2Fwp-content%2Fuploads%2F2015%2F10%2FLily_Flowers_51.jpg&f=1&nofb=1",
+    "category": "plants",
+    "tags": ["featured"]
+  },
+  {
+    "name": "Daisy",
+    "price": "300",
+    "discountedPrice": "10",
+    "rating": "3",
+    "description": "The daisy is a cousin of the sunflower and can be found nearly everywhere on the planet. These plants are often grown commercially but are actually known to be a weed due to their prolific behavior. However, they persist as a popular garden flower due to their visual appeal. They symbolize love, purity and gentleness. Daisies are arranged in a circular arrangement with bright, colorful petals.",
+    "features": {
+      "color": ["white", "yellow"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallsdesk.com%2Fwp-content%2Fuploads%2F2017%2F01%2FDaisy-HD-Wallpaper.jpeg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fweneedfun.com%2Fwp-content%2Fuploads%2F2016%2F01%2FDaisy-Flower-10.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i2.wp.com/www.gardeningchannel.com/wp-content/uploads/2013/03/daisyflowers.jpg?resize=300%2C202&ssl=1",
+    "category": "plants",
+    "tags": ["featured"]
+  },
+  {
+    "name": "Lilac",
+    "price": "350",
+    "discountedPrice": "4",
+    "rating": "5",
+    "description": "Lilacs are historically representative of first loves and new loves. They are very often used as wedding decorations. These flowers are technically a shrub or small tree, and make beautiful additions to the borders of gardens with their light purple flowers and thick foliage. Lilacs grow in many climates but are seen most prominently as European wildflowers.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": ["featured"]
+  },
+  {
+    "name": "Test Product 1",
+    "price": "245",
+    "discountedPrice": "2",
+    "rating": "3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": ["featured"]
+  },
+  {
+    "name": "Test Product 2",
+    "price": "567",
+    "discountedPrice": "2",
+    "rating": "5",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": ["featured"]
+  },
+  {
+    "name": "Test Product 3",
+    "price": "12",
+    "discountedPrice": "2",
+    "rating": "1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": []
+  },
+  {
+    "name": "Test Product 4",
+    "price": "444",
+    "discountedPrice": "2",
+    "rating": "3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": []
+  },
+  {
+    "name": "Test Product 5",
+    "price": "567",
+    "discountedPrice": "2",
+    "rating": "3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": []
+  },
+  {
+    "name": "Test Product 6",
+    "price": "233",
+    "discountedPrice": "2",
+    "rating": "3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": []
+  },
+  {
+    "name": "Test Product 7",
+    "price": "678",
+    "discountedPrice": "2",
+    "rating": "3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": []
+  },
+  {
+    "name": "Test Product 8",
+    "price": "333",
+    "discountedPrice": "2",
+    "rating": "3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic nostrum necessitatibus, itaque sed, natus a ut repudiandae libero tempora incidunt tenetur eveniet ab aspernatur dicta odit nisi nam possimus.",
+    "features": {
+      "color": ["white", "purple"],
+      "origin": "Native America",
+      "beginnerFriendly": false
+    },
+    "imageUrl": [
+      "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thespruce.com%2Fthmb%2FX5nNhmsIjI1I0jNlvgu6URecSxw%3D%2F4288x2848%2Ffilters%3Afill(auto%2C1)%2Flilacvarieties-588915f93df78caebca1425a.jpg&f=1&nofb=1",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FmP4_yhOkOjGWwsDBOMjHVelLlac%3D%2F5000x3300%2Ffilters%3Afill(auto%2C1)%2Fgerbera-daisy-orange-big-58553c735f9b586e0202b379.jpg&f=1&nofb=1"
+    ],
+    "thumbnail": "https://i0.wp.com/www.gardeningchannel.com/wp-content/uploads/2019/10/lilac-growing.jpg?w=640&ssl=1",
+    "category": "plants",
+    "tags": []
+  }
+]

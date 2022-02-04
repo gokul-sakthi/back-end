@@ -1,0 +1,12 @@
+
+GET http://localhost:8000/users
+
+###
+
+POST http://localhost:8000/test/formFileUpload
+Content-Type: application/json
+
+{
+    "Hi": "Hello"
+}
+###

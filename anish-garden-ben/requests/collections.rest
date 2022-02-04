@@ -1,0 +1,88 @@
+
+
+GET http://localhost:8000/collections
+
+###
+
+GET http://localhost:8000/collections/products/?id=619c9aa0fe2eab7da3f1d544
+
+###
+
+POST http://localhost:8000/collections
+Content-Type: application/json
+
+{
+    "name": "text collection",
+    "description": "test collection description",
+    "collections": []
+}
+
+###
+
+PUT http://localhost:8000/collections/add?collectionId=615c73a8b50b53a930afd74f&productId=615c8fc5b50b53a930afd756
+
+###
+
+PUT http://localhost:8000/collections/add?collectionId=61603cafc2db95351b8724fc&multi=true
+Content-Type: application/json
+
+{
+    "products": [
+      "61603953c2db95351b8724eb",
+      "61603953c2db95351b8724ec",
+      "61603953c2db95351b8724ed",
+      "61603953c2db95351b8724ee",
+      "61603953c2db95351b8724ef",
+      "61603953c2db95351b8724f0",
+      "61603953c2db95351b8724f1",
+      "61603953c2db95351b8724f2",
+      "61603953c2db95351b8724f3",
+      "61603953c2db95351b8724f4",
+      "61603953c2db95351b8724f5",
+      "61603953c2db95351b8724eb",
+      "61603953c2db95351b8724ec",
+      "61603953c2db95351b8724ed",
+      "61603953c2db95351b8724ee",
+      "61603953c2db95351b8724ef",
+      "61603953c2db95351b8724f0",
+      "61603953c2db95351b8724f1",
+      "61603953c2db95351b8724f2",
+      "61603953c2db95351b8724f3",
+      "61603953c2db95351b8724f4",
+      "61603953c2db95351b8724f5",
+      "61603953c2db95351b8724eb",
+      "61603953c2db95351b8724ec",
+      "61603953c2db95351b8724ed",
+      "61603953c2db95351b8724ee",
+      "61603953c2db95351b8724ef",
+      "61603953c2db95351b8724f0",
+      "61603953c2db95351b8724f1",
+      "61603953c2db95351b8724f2",
+      "61603953c2db95351b8724f3",
+      "61603953c2db95351b8724f4",
+      "61603953c2db95351b8724f5"
+    ]
+}
+
+###
+
+PUT http://localhost:8000/collections/delete?collectionId=6149e90617372d322301e565&productId=6149e7fa5b2575a59bcf2a0b
+
+###
+
+PUT http://localhost:8000/collections/?collectionId=6149e90617372d322301e565
+Content-Type: application/json
+
+{
+    "name": "text collection updated",
+    "description": "test collection description updated"
+}
+###
+
+DELETE http://localhost:8000/collections/?collectionId=123
+
+###
+
+DELETE http://localhost:8000/collections
+
+###

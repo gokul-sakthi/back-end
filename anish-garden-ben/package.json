@@ -1,0 +1,31 @@
+{
+  "name": "anish-garden-ben",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.2",
+    "formidable": "^1.2.2",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.6",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.6.3",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "qs": "^6.10.1",
+    "serialize-error": "^8.1.0"
+  }
+}

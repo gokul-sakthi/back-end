@@ -1,0 +1,62 @@
+
+GET http://localhost:8000/products/
+
+###
+
+GET http://localhost:8000/products/featured
+
+###
+
+GET http://localhost:8000/products/?productId=614e0250fe69f8b7e3d181bc
+
+###
+
+GET http://localhost:8000/products/?name=test
+
+###
+
+POST http://localhost:8000/products/
+Content-Type: application/json
+
+{
+    "name": "test product 2",
+    "description": "test description 2",
+    "price": "40",
+    "discount": "2",
+    "features": {
+        "dimensions": "23x34x10",
+        "sunlight" : true
+    },
+    "imageUrl": "https://via.placeholder.com",
+    "thumbnail": "https://via.placeholder.com",
+    "category": "plants"
+}
+###
+
+
+{
+    "stocks": 200
+}
+
+PUT http://localhost:8000/products/?category=plants
+Content-Type: application/json
+
+{
+    "category": "test products"
+}
+
+###
+
+DELETE http://localhost:8000/products/
+
+###
+
+DELETE http://localhost:8000/products/?productId=123
+
+###
+
+
+# GET By Tags
+GET http://localhost:8000/products/tags/?tags=featured&limitdoc=2
+
+###

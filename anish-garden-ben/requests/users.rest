@@ -1,0 +1,29 @@
+
+# User request *****************************
+GET http://localhost:8000/users/
+
+###
+
+POST http://localhost:8000/users/
+Content-Type: application/json
+
+{
+    "fullName" : "Ellie",
+    "email": "ellie@gmail.com",
+    "password": "123",
+    "role" : "user",
+    "billingAddress": "123 Hyrakuren Platoon",
+    "phone": "1234567890"
+}
+###
+
+# Wish list request ****************************
+
+PUT http://localhost:8000/users/wishlist/?userid=619e5b1155a3e8afbadf3ed8&id=619c7c59fe2eab7da3f1d521
+
+###
+
+PUT http://localhost:8000/users/wishlist/?userid=619e5b1155a3e8afbadf3ed8&id=619c7c59fe2eab7da3f1d521&operation=remove
+
+###
+
