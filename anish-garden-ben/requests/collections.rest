@@ -1,6 +1,6 @@
 
 
-GET http://localhost:8000/collections
+GET https://eplants-backend.herokuapp.com/collections
 
 ###
 
