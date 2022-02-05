@@ -27,7 +27,11 @@ require("./config/db.conf");
 require("./routes/authentication/passport/setup");
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use("*/products", express.static("tmp/uploads/products"));
 
