@@ -43,7 +43,7 @@ app.use(
     resave: true,
     saveUninitialized: false,
     store: MongoStore.create({
-      mongoUrl: "mongodb://localhost:27017/agarden",
+      mongoUrl: process.env.MONGO_URL,
     }),
   })
 );
