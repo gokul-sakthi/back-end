@@ -27,6 +27,12 @@ require("./config/db.conf");
 require("./routes/authentication/passport/setup");
 
 app.use(express.json());
+app.use(
+  cors({
+    credentials: true,
+    origin: ["http://localhost:4200", "https://personalwebies.web.app"],
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use("*/products", express.static("tmp/uploads/products"));
 
@@ -56,16 +62,6 @@ app.use("/discounts", discountRoutes);
 app.use("/orders", orderRoutes);
 app.use("/test", testRoutes);
 app.use("/others", otherRoutes);
-
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Content-Type,Content-Length, Authorization, Accept,X-Requested-With"
-  );
-  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-  next();
-});
 
 // error
 // app.use((err, req, res, next) => {
