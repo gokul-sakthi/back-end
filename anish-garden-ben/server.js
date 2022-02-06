@@ -29,7 +29,7 @@ require("./routes/authentication/passport/setup");
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://personalwebies.web.app",
   })
 );
 app.use(express.urlencoded({ extended: true }));
