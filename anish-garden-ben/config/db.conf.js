@@ -10,5 +10,5 @@ mongoose
     console.log("Mongoose connection Successful");
   })
   .catch((err) => {
-    console.log("Mongoose connection Error", err);
+    console.log("Mongoose connection Error ***********\n", err);
   });
