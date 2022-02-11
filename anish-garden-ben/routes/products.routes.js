@@ -1,43 +1,17 @@
 const router = require("express").Router();
 const path = require("path");
 const mongoose = require("mongoose");
-const multer = require("multer");
+const streamifier = require("streamifier");
 const fs = require("fs");
-
+const { multerUpload } = require("../config/multer");
 const ProductModel = require("../models/db/product.model");
 const { isValidObjectId } = require("mongoose");
 const Response = require("../models/network/response.model");
+const cloudinary = require("../config/cloudinary");
 
 // multer
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, "../tmp/uploads/products"));
-  },
-  filename: function (req, file, cb) {
-    if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
-      cb(null, `${Date.now()}.${file.mimetype.split("/")[1]}`);
-    } else {
-      cb(null, Date.now());
-    }
-  },
-});
-
-const fileFilter = function (req, file, cb) {
-  if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
-    cb(null, true);
-  } else {
-    cb({ message: "Only Jpeg/PNG supported" });
-  }
-};
-
-const upload = multer({
-  storage: storage,
-  limits: { fileSize: "2MB" },
-  fileFilter: fileFilter,
-});
-
-const cpUpload = upload.fields([
+const cpUpload = multerUpload.fields([
   { name: "images", maxCount: 4 },
   { name: "thumbnail", maxCount: 1 },
 ]);
@@ -57,16 +31,7 @@ router.get("/", (req, res) => {
   //   }
   // }
 
-  let projectionfields = {
-    images: {
-      mimetype: false,
-      path: false,
-    },
-    thumbnail: {
-      mimetype: false,
-      path: false,
-    },
-  };
+  let projectionfields = {};
   console.log(query);
   ProductModel.find(query, projectionfields)
     .exec()
@@ -118,39 +83,117 @@ router.post("/query", (req, res) => {
     });
 });
 
-router.post("/addproduct", cpUpload, (req, res) => {
-  const imageFromBody = req.files.images.map((image) => {
-    return {
-      filename: image.filename,
-      path: image.path,
-      mimetype: image.mimetype,
-      originalName: image.originalname,
-      size: image.size,
-    };
-  });
-  const thumbnailFromBody = req.files.thumbnail.map((image) => {
-    return {
-      filename: image.filename,
-      path: image.path,
-      mimetype: image.mimetype,
-      originalName: image.originalname,
-      size: image.size,
-    };
-  })[0];
+// *********************** Utility functions *************************
 
-  const newProduct = new ProductModel({
+const uploadToCloudinary = (item, image = true) => {
+  if (!image) {
+    console.log("Thumbnail", item);
+  }
+
+  if (!item)
+    return new Promise((res, rej) => rej(new Error("No Buffer item found")));
+  else
+    return new Promise((resolve, reject) => {
+      let cld_upload_stream = cloudinary.uploader.upload_stream(
+        {
+          folder: "eplants",
+        },
+        (error, result) => {
+          if (result) {
+            resolve(result);
+          } else {
+            reject(error);
+          }
+        }
+      );
+      console.log("ITEM BUFF + ++ + + +", item.buffer);
+      streamifier.createReadStream(item.buffer).pipe(cld_upload_stream);
+    });
+};
+
+const startUploadFiles = async (imageFiles = [], thumbnailFile) => {
+  let tempImages = [];
+  let tempThumbnail = {};
+  let resultFromUpload = undefined;
+  let errorEncountered = {
+    status: false,
+    data: null,
+  };
+
+  await imageFiles.every((item) => {
+    uploadToCloudinary(item)
+      .then((result) => {
+        tempImages.push({
+          public_id: result.public_id,
+          secure_url: result.secure_url,
+        });
+      })
+      .catch((err) => {
+        console.log("Error = ", err);
+        errorEncountered = {
+          status: true,
+          data: err,
+        };
+      });
+    if (errorEncountered.status) return false;
+    return true;
+  });
+
+  if (errorEncountered.status) {
+    return {
+      tempImages,
+      tempThumbnail,
+      errorEncountered,
+    };
+  } else {
+    await uploadToCloudinary(thumbnailFile[0], false)
+      .then((result) => {
+        tempThumbnail = {
+          public_id: result.public_id,
+          secure_url: result.secure_url,
+        };
+      })
+      .catch((err) => {
+        errorEncountered = {
+          status: true,
+          data: err,
+        };
+      });
+  }
+
+  return {
+    tempImages,
+    tempThumbnail,
+    errorEncountered,
+  };
+};
+
+// ***************************************************************
+
+router.post("/addproduct", cpUpload, async (req, res) => {
+  console.log(req.files.thumbnail);
+  const result = await startUploadFiles(req.files.images, req.files.thumbnail);
+
+  if (result.errorEncountered.status) {
+    res.json(
+      new Response("Product Save", "ERR", null, result.errorEncountered.data)
+    );
+    return;
+  }
+
+  const newProduct = await new ProductModel({
     name: req.body.name,
     description: req.body.description,
-    images: imageFromBody,
+    images: result.tempImages,
     category: req.body.category,
     subCategory: req.body.subCategory,
-    thumbnail: thumbnailFromBody,
+    thumbnail: result.tempThumbnail,
     price: req.body.price,
     stocks: req.body.stocks,
     tags: req.body.price,
   });
 
-  newProduct
+  await newProduct
     .save()
     .then((response) => {
       res.json(new Response("Product Save", "OK", response, null));
@@ -158,13 +201,6 @@ router.post("/addproduct", cpUpload, (req, res) => {
     .catch((err) => {
       res.json(new Response("Product Save", "ERR", null, err.message));
     });
-
-  // console.log(req.files);
-  // console.log(req.body);
-  // res.json({
-  //   files: req.files,
-  //   fields: req.body,
-  // });
 });
 
 router.put("/", cpUpload, (req, res) => {
@@ -272,9 +308,8 @@ router.delete("/id", (req, res) => {
   ProductModel.findByIdAndDelete(req.query.id)
     .exec()
     .then(async (response) => {
-      console.log(response.images);
       await res.json(new Response("Product Delete", "OK", response, null));
-      await removeGarbageImages([...response.images, response.thumbnail]);
+      removeGarbageImages([...response.images, response.thumbnail]);
     })
     .catch((err) => {
       res.json(new Response("Product Delete", "ERR", null, err.message));
@@ -287,8 +322,8 @@ module.exports = router;
 
 const removeGarbageImages = (images = []) => {
   images.forEach((image) => {
-    fs.unlink(image.path, (err) => {
-      console.log("Err in unlinking file -> " + image.path);
+    cloudinary.uploader.destroy(image.public_id, {}, (err, result) => {
+      console.log(result);
     });
   });
 };
