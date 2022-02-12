@@ -30,7 +30,12 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:4200", "https://personalwebies.web.app"],
+    origin: [
+      "http://localhost:4200",
+      "http://localhost:4201",
+      "https://personalwebies.web.app",
+      "https://anish-garden-admin.web.app",
+    ],
   })
 );
 app.use(express.urlencoded({ extended: true }));
